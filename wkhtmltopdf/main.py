@@ -168,7 +168,7 @@ class WKhtmlToPdf(object):
             elif retcode < 0:
                 raise Exception("terminated by signal: ", -retcode)
             else:
-                raise Exception(stderr)
+                raise Exception(stderr + "\n\n" + command)
 
         except OSError, exc:
             raise exc
