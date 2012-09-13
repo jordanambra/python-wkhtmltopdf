@@ -130,7 +130,7 @@ class WKhtmlToPdf(object):
 
         # set the options per the kwargs coming in
         for o in OPTIONS:
-            o.value = kwargs.get(o.dest)
+            o.value = kwargs.get(o.dest, o.value)
 
         self.params = [o.to_cmd() for o in OPTIONS]
         self.screen_resolution = [1024, 768]
