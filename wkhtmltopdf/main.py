@@ -21,7 +21,7 @@ class WKOption(object):
         self.validate_error = validate_error
 
         # we're going to want to get the values in here
-        self.value = None
+        self.value = default
 
     def validate(self):
         if self.validate is None:
